@@ -5,7 +5,7 @@ if ( !isset($meta) ) {
 
 $meta['siteName'] = "b-hyungjoon-site";
 $meta['siteCanonicalUrl'] = $_SERVER['REQUEST_URI'];
-$meta['siteKeywords'] = "IT, Java, PHP, HTML, CSS, Javascript, MySQL";
+$meta['siteKeywords'] = "IT, Java, PHP, HTML, CSS, Javascript, MySQL,";
 
 if ( !isset($meta['pageGenDate']) ) {
   $meta['pageGenDate'] = date("Y-m-d") . 'T' . date("H:i:s") . 'Z';
@@ -17,10 +17,6 @@ if ( !isset($meta['siteSubject']) ) {
 
 if ( !isset($meta['siteDescription']) ) {
   $meta['siteDescription'] = "누구나 쉽게 공부 할 수 있는 IT 블로그 플랫폼, 준이의 코딩천국 입니다. 코딩, 그리 어렵지 않아요~ 누구나 할 수 있어요!";
-}
-
-if ( !isset($meta['og:title']) ) {
-  $meta['og:title'] = $meta['siteSubject'];
 }
 
 $meta['siteDomain'] = $prodSiteDomain;

@@ -33,7 +33,7 @@ $loginedMember = $_REQUEST['App__loginedMember'];
 
     <?php if ($envCode == 'prod') { ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-94LNZ8CK0K"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPW2M5Z5TG"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
 
@@ -43,20 +43,20 @@ $loginedMember = $_REQUEST['App__loginedMember'];
 
             gtag('js', new Date());
 
-            gtag('config', 'G-94LNZ8CK0K');
+            gtag('config', 'G-PPW2M5Z5TG');
         </script>
     <?php } ?>
 
-    <?php require_once "meta.php"; ?>
+    <?php require_once "meta.php"; ?>   
 
 </head>
 <body>
 <div class="site-wrap min-h-screen flex flex-col pt-10">
-    <header class="top-bar fixed top-0 inset-x-0 bg-black text-white h-10">
+    <header class="top-bar fixed top-0 inset-x-0 text-color h-10">
         <div class="container mx-auto h-full flex">
             <a href="/" class="top-bar__logo px-5 flex items-center">
-                <span><i class="fas fa-lemon"></i></span>
-                <span class="ml-2 font-bold hidden sm:inline">LEMON BLOG</span>
+                <span><i class="fas fa-moon"></i></span>
+                <span class="ml-2 font-bold hidden sm:inline">준이의 코딩천국</span>
             </a>
 
             <div class="flex-grow"></div>
