@@ -5,12 +5,16 @@ $pageTitle = "내 정보";
 
 <?php require_once __DIR__ . "/../head.php"; ?>
 
+
 <section class="section-articles mt-4">
-  <div class="container mx-auto">
+<hr style='border:2px solid gray'>
+  <div class="container mx-auto">  
   <div class="con-pad">
+  <div style="font-weight: bold; color: darkblue; font-size: 1.1em;">인생이란 폭우가 지나가기만을 기다리는 것이 아니라, 그 빗속에서 춤추는 법을 배우는 것이다.</div>
+  <div style="font-weight: bold; color: darkblue; font-size: 1.1em;">Life isn't about waiting for the storm to pass, it's about learning to dance in the rain</div>
   <div class="h-20 flex mt-4 sm:h-40 md:h-60 lg:h-80">
   <div class="flex justify-center img-box w-2/3">     
-    <br>
+    <br>    
     <img class="h-full" src="https://i.pinimg.com/564x/b3/f7/d0/b3f7d0db41a6016ccc29ceb2a19443a1.jpg" width="400" height="100" style = padding:30px>
     <div class="flex flex-col px-5 justify-center justify-around flex-grow">  
     <div class = "fas fa-user"> 정형준 Jeong Hyung Joon</div>
