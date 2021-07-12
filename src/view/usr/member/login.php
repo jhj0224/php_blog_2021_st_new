@@ -20,6 +20,7 @@ $pageTitle = "로그인 페이지";
       </div>
       <div class = "text-center">
         <input type="submit" class = "btn btn-info" value="Login">
+        <button onclick="history.back();" input type="button" class="btn btn-info">Back</button>
       </div>
     </form>
   </div>
