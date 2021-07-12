@@ -2,10 +2,18 @@
 
 namespace App\Interceptor;
 
+use App\Container\Container;
+
 class NeedLoginInterceptor extends Interceptor
 {
-    function run(string $action)
+    use Container;
+    
+    function run(string $action): void
     {
+        if ( str_starts_with($action, 'common/') ) {
+            return;
+        }
+
         switch ($action) {
             case 'usr/member/login':
             case 'usr/member/doLogin':

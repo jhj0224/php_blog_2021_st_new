@@ -9,20 +9,24 @@ use App\Interceptor\NeedLogoutInterceptor;
 
 class Application
 {
-    public static function getInstance(): Application
-    {
-        static $instance;
+    function getTempSitemapFilePath(): string {
+        $envCode = $this->getEnvCode();
 
-        if ($instance === null) {
-            $instance = new Application();
+        $dir = "";
+
+        if ($envCode == 'dev') {
+            $dir = "C:/temp";
+        } else {
+            $dir = "/tmp";
         }
 
-        return $instance;
-    }
+        if ( !is_dir($dir) ) {
+            mkdir($dir);
+        }
 
-    private function __construct()
-    {
+        $filePath = $dir . "/{$this->getProdSiteDomain()}__sitemap.xml";
 
+        return $filePath;
     }
 
     function getEnvCode(): string
@@ -34,26 +38,35 @@ class Application
         return "dev";
     }
 
-    function getProdSiteDomain()
+    function getProdSiteDomain(): string
     {
         return "b.hyungjoon.site";
+    }
+
+    function getProdSiteProtocol(): string {
+        return "https";
+    }
+
+    function getProdSiteBaseUrl() {
+        return $this->getProdSiteProtocol() . "://" . $this->getProdSiteDomain();
     }
 
     public function getDbConnectionByEnv(): \mysqli
     {
         $envCode = $this->getEnvCode();
 
-        if ($envCode == 'dev') {
+        if ( $envCode == 'dev' ) {
             $dbHost = "127.0.0.1";
             $dbId = "sbsst";
             $dbPw = "sbs123414";
             $dbName = "php_blog_2021";
-        } else {
+          }
+          else if ( $envCode == 'prod' ) {
             $dbHost = "127.0.0.1";
             $dbId = "st__2021_04_full__site12";
             $dbPw = "1234";
             $dbName = "st__2021_04_full__site12";
-        }
+          }
 
         $dbConn = mysqli_connect($dbHost, $dbId, $dbPw, $dbName) or die("DB CONNECTION ERROR");
 
@@ -63,7 +76,7 @@ class Application
     public function runByRequestUri(string $requestUri)
     {
         if ($requestUri == '/') {
-            jsLocationReplaceExit("/usr/article/list");
+            location302("/usr/article/list");
         }
 
         list($action) = explode('?', $requestUri);

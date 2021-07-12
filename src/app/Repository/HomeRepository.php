@@ -1,3 +1,7 @@
 <?php
-class APP__HomeRepository {
+
+namespace App\Repository;
+
+class HomeRepository
+{
 }

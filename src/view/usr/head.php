@@ -3,7 +3,7 @@ if (isset($pageTitle) == false) {
     $pageTitle = "";
 }
 
-$application = $this->getApplication();
+$application = $this->application();
 $envCode = $application->getEnvCode();
 $prodSiteDomain = $application->getProdSiteDomain();
 $isLogined = $_REQUEST['App__isLogined'];
@@ -33,7 +33,7 @@ $loginedMember = $_REQUEST['App__loginedMember'];
 
     <?php if ($envCode == 'prod') { ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPW2M5Z5TG"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-94LNZ8CK0K"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
 
@@ -43,11 +43,11 @@ $loginedMember = $_REQUEST['App__loginedMember'];
 
             gtag('js', new Date());
 
-            gtag('config', 'G-PPW2M5Z5TG');
+            gtag('config', 'G-94LNZ8CK0K');
         </script>
     <?php } ?>
 
-    <?php require_once "meta.php"; ?>   
+    <?php require_once "meta.php"; ?>
 
 </head>
 <body>

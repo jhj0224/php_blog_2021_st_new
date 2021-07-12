@@ -1,6 +1,12 @@
 <?php
-class APP__HomeService {
-  private APP__HomeRepository $homeRepository;
+
+namespace App\Service;
+
+use App\Container\Container;
+
+class HomeService {
+  
+  use Container;
 
   public function __construct() {
     global $App__homeRepository;

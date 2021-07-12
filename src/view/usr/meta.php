@@ -3,7 +3,7 @@ if ( !isset($meta) ) {
   $meta = [];
 }
 
-$meta['siteName'] = "b-hyungjoon-site";
+$meta['siteName'] = "BBB BLOG";
 $meta['siteCanonicalUrl'] = $_SERVER['REQUEST_URI'];
 $meta['siteKeywords'] = "IT, Java, PHP, HTML, CSS, Javascript, MySQL";
 
@@ -41,7 +41,7 @@ $meta['siteMetaImgUrl'] = "/resource/img/logo/logo_meta.png";
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="<?=$meta['siteName']?>" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="<?=$meta['siteSubject']?>" />
+<meta property="og:title" content="<?=$meta['og:title']?>" />
 <meta property="og:description" content="<?=$meta['siteDescription']?>" />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="<?=$meta['siteMainUrl']?><?=$meta['siteMetaImgUrl']?>" />
